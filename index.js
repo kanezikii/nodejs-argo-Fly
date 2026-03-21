@@ -38,13 +38,13 @@ const NAME = process.env.NAME || 'MyNode';
 const DISABLE_ARGO = process.env.DISABLE_ARGO || false;      
 
 // ================== TG 推送配置 (已内置) ==================
-const CHAT_ID = process.env.CHAT_ID || '6499138234';                   
-const BOT_TOKEN = process.env.BOT_TOKEN || '8490493179:AAG1Q5pkFNkUzR2E5pSm8OpJa_SPZNf32Mw';               
+const CHAT_ID = process.env.CHAT_ID || '';                   
+const BOT_TOKEN = process.env.BOT_TOKEN || '';               
 
 // ================== Komari 探针配置 ==================
 const KOMARI_SERVER = process.env.KOMARI_SERVER || 'https://wo.zhiairenqi.dpdns.org'; 
 // ⚠️ 如果你不想在此处写死，也可以在环境变量面板填入 KOMARI_TOKEN
-const KOMARI_TOKEN = process.env.KOMARI_TOKEN || 'ikTDW667hhLtLTWjIaLZTH'; 
+const KOMARI_TOKEN = process.env.KOMARI_TOKEN || ''; 
 
 
 // 创建运行文件夹
