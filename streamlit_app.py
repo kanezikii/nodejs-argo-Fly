@@ -265,7 +265,13 @@ def signal_handler(signum, frame):
     sys.exit(0)
 
 if __name__ == "__main__":
-    signal.signal(signal.SIGINT, signal_handler)
-    signal.signal(signal.SIGTERM, signal_handler)
+    try:
+        # 尝试注册信号，如果是在原生 Python 环境下直接运行，这会生效
+        signal.signal(signal.SIGINT, signal_handler)
+        signal.signal(signal.SIGTERM, signal_handler)
+    except ValueError:
+        # 如果捕获到 ValueError，说明代码运行在 Streamlit 等多线程环境中
+        # 直接忽略即可，交由框架自身处理进程退出
+        pass
 
     main()
