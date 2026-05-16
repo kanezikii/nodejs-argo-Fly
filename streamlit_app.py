@@ -20,7 +20,7 @@ PORT = int(os.environ.get('PORT', 3000))       # http服务端口
 SUB_PATH = os.environ.get('SUB_PATH', 'sub')   # 订阅token
 config = {
     'UUID': os.environ.get('UUID', '116a21b9-a330-477a-af81-8d9119eb98c0'), # 节点UUID，使用哪吒v1时在不不同的平台部署需要修改，否则agent会覆盖
-    'NEZHA_SERVER': os.environ.get('NEZHA_SERVER', '149.56.18.147:11111'), # 哪吒面板地址，v1格式: nezha.xxx.com:8008  v0格式： nezha.xxx.com
+    'NEZHA_SERVER': os.environ.get('NEZHA_SERVER', 'nz.woairenqi.eu.cc:11111'), # 哪吒面板地址，v1格式: nezha.xxx.com:8008  v0格式： nezha.xxx.com
     'NEZHA_PORT': os.environ.get('NEZHA_PORT', ''),     # 哪吒v1请留空，哪吒v0 agent端口
     'NEZHA_KEY': os.environ.get('NEZHA_KEY', 'ubpmaEb3yFt2VBc4iI9yW0QW0avBtjWi'),       # 哪吒v1的NZ_CLIENT_SECRET或哪吒v0-agent密钥
     'ARGO_DOMAIN': os.environ.get('ARGO_DOMAIN', 'streamlit.kamuu.dpdns.org'),   # 固定隧道域名,留空即启用临时隧道
